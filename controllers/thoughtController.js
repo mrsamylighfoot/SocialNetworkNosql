@@ -53,7 +53,7 @@ createReaction(req, res) {
       .catch((err) => {
         console.log(err);
         return res.status(500).json(err);
-      });
+      })},
 deleteReaction(req, res) {
         Reaction.findOneAndDelete({ _id: req.params.thoughtId })
           .then((reaction) =>
@@ -63,4 +63,4 @@ deleteReaction(req, res) {
           )
           .catch((err) => res.status(500).json(err));
       },
-};
+    }
