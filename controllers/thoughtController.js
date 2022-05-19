@@ -47,4 +47,20 @@ module.exports = {
       )
       .catch((err) => res.status(500).json(err));
   },
+createReaction(req, res) {
+    Reaction.create(req.body)
+      .then((reaction) => res.json(reaction))
+      .catch((err) => {
+        console.log(err);
+        return res.status(500).json(err);
+      });
+deleteReaction(req, res) {
+        Reaction.findOneAndDelete({ _id: req.params.thoughtId })
+          .then((reaction) =>
+            !reaction
+              ? res.status(404).json({ message: "No reaction with that ID" })
+              : Reaction.deleteMany({ _id: { $in: thought.reactions } })
+          )
+          .catch((err) => res.status(500).json(err));
+      },
 };

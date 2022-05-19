@@ -12,7 +12,7 @@ const friendCount = async () =>
 module.exports = {
   getUser(req, res) {
     User.find()
-      .then(async (students) => {
+      .then(async (users) => {
         const userObj = {
           users,
           totalUsers: await totalUsers(),
@@ -27,8 +27,8 @@ module.exports = {
   getSingleUser(req, res) {
     User.findOne({ _id: req.params.userId })
       .select("-__v")
-      .then(async (student) =>
-        !student
+      .then(async (user) =>
+        !user
           ? res.status(404).json({ message: "No user with that ID" })
           : res.json({
               user,

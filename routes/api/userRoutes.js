@@ -1,4 +1,4 @@
-const router = require("express").Router();
+const router = require('express').Router();
 const {
   getUsers,
   getSingleUser,
@@ -7,9 +7,9 @@ const {
   deleteUser,
   addFriend,
   removeFriend,
-} = require("../../controllers/userController.js");
+} = require('../../controllers/userController.js');
 // **`/api/users`**
-router.route("/").get(getUsers).post(createUser);
+router.route('/').get(getUsers).post(createUser);
 // * `GET` all users
 // * `GET` a single user by its `_id` and populated thought and friend data
 // * `POST` a new user:
