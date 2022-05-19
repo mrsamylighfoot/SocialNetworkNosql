@@ -3,8 +3,8 @@ const { User, Thought } = require("../models")
 
 await User.collection.insertOne
 {
-    "username": "lernantino",
-    "email": "lernantino@gmail.com"
+    'username': 'lernantino',
+    'email': 'lernantino@gmail.com'
   };
 
 await User.collection.insertOne
@@ -19,3 +19,5 @@ await Thought.collection.insertOne
     "username": "lernantino",
     "userId": "5edff358a0fcb779aa7b118b"
   };
+
+module.exports = { getThoughts, User , Thought};
