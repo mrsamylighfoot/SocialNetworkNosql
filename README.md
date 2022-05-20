@@ -24,6 +24,8 @@ yes
 
 ## Features
 
+Screencastify video: https://drive.google.com/file/d/1n7Mt77gvYciz-In3JPmz7jzugWX8FKeN/view
+
 ## Contribute
 
 ## Tests

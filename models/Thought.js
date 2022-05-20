@@ -10,7 +10,7 @@ const thoughtSchema = new Schema(
     },
     createdAt: {
       type: Date,
-      get: (date) => timeSince(date),
+    //   get: (date) => timeSince(date),
       default: Date.now,
       // Use a getter method to format the timestamp on query
     },
